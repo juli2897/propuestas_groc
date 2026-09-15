@@ -1,5 +1,5 @@
 <!doctype html><html><head><meta charset="utf8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#f6f2e4;color:#2b2a24}img{max-width:100%}[hidden]:not([hidden=until-found]){display:none!important}</style></head><body>
-<title>Propuesta Virprotec e Incruiser</title>
+<title>Propuestas · Juliana Avendaño García</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
 <style>
@@ -13,10 +13,6 @@
     --ink-soft:#6b6656;
     --on-accent:#fbf7ea;
     --border:#e4d9b8;
-    --good:#5b6e42;
-    --good-soft:#e7e6d3;
-    --caution:#a34632;
-    --caution-soft:#efddd2;
     --shadow:0 1px 2px rgba(43,42,36,0.07), 0 10px 28px -16px rgba(43,42,36,0.3);
   }
   @media (prefers-color-scheme: dark){
@@ -30,10 +26,6 @@
       --ink-soft:#b8b29c;
       --on-accent:#211f15;
       --border:#443f2e;
-      --good:#9bb37e;
-      --good-soft:#2c3320;
-      --caution:#e08868;
-      --caution-soft:#3a2417;
       --shadow:0 1px 2px rgba(0,0,0,0.35), 0 14px 32px -16px rgba(0,0,0,0.6);
     }
   }
@@ -47,10 +39,6 @@
     --ink-soft:#b8b29c;
     --on-accent:#211f15;
     --border:#443f2e;
-    --good:#9bb37e;
-    --good-soft:#2c3320;
-    --caution:#e08868;
-    --caution-soft:#3a2417;
     --shadow:0 1px 2px rgba(0,0,0,0.35), 0 14px 32px -16px rgba(0,0,0,0.6);
   }
 
@@ -60,6 +48,7 @@
     color:var(--ink);
     font-family:'Work Sans', system-ui, -apple-system, sans-serif;
     line-height:1.62;
+    min-height:100vh;
   }
   ::selection{ background:var(--surface-2); }
 
@@ -74,7 +63,6 @@
   .eyebrow.on-accent{ color:var(--on-accent); opacity:0.85; }
 
   h1,h2{ font-family:'Fraunces', Georgia, serif; font-weight:700; text-wrap:balance; margin:0; color:var(--ink); }
-  h3{ font-family:'Work Sans', sans-serif; font-weight:600; margin:0; color:var(--ink); }
 
   .mono{ font-family:'IBM Plex Mono', ui-monospace, monospace; font-variant-numeric:tabular-nums; }
 
@@ -82,437 +70,74 @@
     width:96px; height:48px;
     background:var(--mustard);
     border-radius:96px 96px 0 0;
+    margin:0 auto;
   }
 
-  /* ---------- Cover ---------- */
   .cover-top{
     background:var(--mustard);
     padding:3.2rem 1.5rem 2.6rem;
+    text-align:center;
   }
-  .cover-top-inner{ max-width:760px; margin:0 auto; }
-  .cover-top h1{ color:var(--on-accent); font-size:clamp(2.3rem, 5.6vw, 3.3rem); line-height:1.08; max-width:19ch; margin-top:0.7rem; }
-  .cover-top p.dek{ margin-top:1rem; font-size:1.05rem; color:var(--on-accent); opacity:0.88; max-width:54ch; }
+  .cover-top-inner{ max-width:640px; margin:0 auto; }
+  .cover-top h1{ color:var(--on-accent); font-size:clamp(2rem, 5.6vw, 2.8rem); line-height:1.12; margin-top:0.7rem; }
+  .cover-top p.dek{ margin-top:1rem; font-size:1.02rem; color:var(--on-accent); opacity:0.88; max-width:44ch; margin-left:auto; margin-right:auto; }
 
-  .cover-bottom{ background:var(--bg); padding:2.2rem 1.5rem 2.6rem; }
-  .cover-bottom-inner{ max-width:760px; margin:0 auto; }
-  .cover-meta{
-    margin-top:1.4rem;
-    display:flex;
-    flex-wrap:wrap;
-    gap:1.5rem 2.4rem;
-    padding-top:1.3rem;
-    border-top:1px solid var(--border);
-  }
-  .cover-meta div .mlabel{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.64rem;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    color:var(--ink-soft);
-    display:block;
-    margin-bottom:0.25rem;
-  }
-  .cover-meta div .mval{ font-size:0.95rem; font-weight:600; }
+  .wrap{ max-width:640px; margin:0 auto; padding:3.4rem 1.5rem 2rem; text-align:center; }
 
-  /* ---------- Generic section shell ---------- */
-  .wrap{ max-width:760px; margin:0 auto; padding:0 1.5rem; }
-  section.block{ padding:2.6rem 0; }
-  .divider{ display:flex; justify-content:center; padding-top:0.2rem; }
-
-  .intro p{ font-size:1.05rem; color:var(--ink); max-width:64ch; }
-  .intro p + p{ margin-top:0.9rem; }
-
-  /* ---------- Project sections ---------- */
-  .project-head{ margin-bottom:1.6rem; }
-  .project-head .eyebrow{ display:block; margin-bottom:0.5rem; }
-  .project-head h2{ font-size:clamp(1.8rem, 5vw, 2.35rem); }
-  .project-head p{ margin-top:0.7rem; font-size:1rem; color:var(--ink-soft); max-width:60ch; }
-
-  .project{
+  .note{
+    margin-top:2.4rem;
     background:var(--surface);
     border:1px solid var(--border);
     border-radius:14px;
-    padding:2rem 1.8rem;
+    padding:1.5rem 1.7rem;
+    font-size:0.92rem;
+    color:var(--ink-soft);
     box-shadow:var(--shadow);
   }
-
-  .subhead{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.7rem;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    color:var(--ink-soft);
-    margin:0 0 0.9rem;
-  }
-
-  .pkg-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-    gap:1rem;
-  }
-  .pkg-card{
-    background:var(--bg);
-    border:1px solid var(--border);
-    border-radius:12px;
-    padding:1.2rem 1.3rem;
-    display:flex;
-    flex-direction:column;
-  }
-  .pkg-card .pkg-name{ font-size:1.06rem; }
-  .pkg-card .pkg-price{
-    font-family:'IBM Plex Mono', monospace;
-    color:var(--mustard-deep);
-    font-size:1rem;
-    margin-top:0.35rem;
-    font-variant-numeric:tabular-nums;
-  }
-  .pkg-card .pkg-discount{
-    font-family:'IBM Plex Mono', monospace;
-    color:var(--good);
-    font-size:0.82rem;
-    margin-top:0.2rem;
-  }
-  .pkg-row{ margin-top:0.85rem; font-size:0.9rem; }
-  .pkg-row .pkg-label{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.65rem;
-    letter-spacing:0.06em;
-    text-transform:uppercase;
-    color:var(--good);
-    display:block;
-    margin-bottom:0.25rem;
-  }
-  .pkg-row.no .pkg-label{ color:var(--caution); }
-  .pkg-row.entrega .pkg-label{ color:var(--ink-soft); }
-  .pkg-row p{ margin:0; color:var(--ink); }
-
-  .note{
-    margin-top:1.1rem;
-    background:var(--good-soft);
-    border-radius:10px;
-    padding:0.9rem 1.1rem;
-    font-size:0.88rem;
-    color:var(--ink);
-  }
-  .note strong{ color:var(--good); }
-  .note.alt{ background:var(--surface-2); }
-  .note.alt strong{ color:var(--mustard-deep); }
-
-  /* ---------- Executive summary banner ---------- */
-  .exec{
-    background:var(--mustard);
-    border-radius:14px;
-    padding:1.5rem 1.7rem;
-    color:var(--on-accent);
-    margin-bottom:1.6rem;
-  }
-  .exec .exec-label{ font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; opacity:0.85; font-weight:600; }
-  .exec .exec-num{ font-family:'Fraunces', serif; font-weight:700; font-size:clamp(1.7rem, 5vw, 2.2rem); margin-top:0.4rem; }
-  .exec p{ margin:0.5rem 0 0; font-size:0.9rem; opacity:0.92; max-width:56ch; }
-
-  /* ---------- Investment groups ---------- */
-  .inv-group{ margin-top:1.6rem; }
-  .inv-group:first-of-type{ margin-top:0; }
-  .inv-group h3{ font-size:1rem; margin-bottom:0.15rem; }
-  .inv-group .inv-tag{ font-family:'IBM Plex Mono', monospace; font-size:0.68rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-soft); }
-  .table-wrap{ overflow-x:auto; margin-top:0.7rem; border:1px solid var(--border); border-radius:12px; }
-  table{ border-collapse:collapse; width:100%; font-size:0.9rem; min-width:480px; }
-  th, td{ text-align:left; padding:0.7rem 1rem; border-bottom:1px solid var(--border); }
-  th{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.64rem;
-    letter-spacing:0.06em;
-    text-transform:uppercase;
-    color:var(--ink-soft);
-    font-weight:500;
-    background:var(--surface-2);
-  }
-  td.num{ font-family:'IBM Plex Mono', monospace; font-variant-numeric:tabular-nums; white-space:nowrap; }
-  tr:last-child td{ border-bottom:none; }
-
-  /* ---------- Next steps ---------- */
-  .steps{ display:flex; flex-direction:column; gap:0.9rem; margin-top:1.2rem; }
-  .step{ display:flex; gap:1rem; align-items:flex-start; }
-  .step-num{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.8rem;
-    color:var(--on-accent);
-    background:var(--mustard);
-    border-radius:99px;
-    width:1.8rem; height:1.8rem;
-    display:grid; place-items:center;
-    flex-shrink:0;
-  }
-  .step p{ margin:0; font-size:0.96rem; }
-  .step strong{ display:block; font-size:0.98rem; margin-bottom:0.15rem; }
+  .note strong{ color:var(--ink); }
 
   .contact-card{
-    margin-top:1.6rem;
-    background:var(--ink);
-    color:var(--bg);
-    border-radius:14px;
-    padding:1.6rem 1.8rem;
-    display:flex;
-    flex-wrap:wrap;
-    gap:1rem 2rem;
-    justify-content:space-between;
-    align-items:center;
+    margin-top:2.6rem;
+    display:inline-block;
+    text-align:left;
   }
-  .contact-card .who{ font-family:'Fraunces', serif; font-weight:700; font-size:1.4rem; line-height:1.1; }
-  .contact-card .email{ font-family:'IBM Plex Mono', monospace; font-size:0.9rem; opacity:0.85; margin-top:0.4rem; }
+  .contact-card .who{ font-family:'Fraunces', serif; font-weight:700; font-size:1.15rem; line-height:1.1; color:var(--ink); }
+  .contact-card .email{ font-family:'IBM Plex Mono', monospace; font-size:0.85rem; color:var(--ink-soft); margin-top:0.4rem; }
 
   footer{
-    max-width:760px;
+    max-width:640px;
     margin:0 auto;
-    padding:2rem 1.5rem 3.4rem;
+    padding:1.6rem 1.5rem 3rem;
     color:var(--ink-soft);
-    font-size:0.82rem;
-  }
-
-  @media (max-width:560px){
-    .contact-card{ flex-direction:column; align-items:flex-start; }
-  }
-
-  @media print{
-    body{ background:var(--bg); }
-    /* Chromium's print engine does not reliably fragment grid/flex children,
-       so cards and steps are un-gridded to plain blocks for the PDF only —
-       that lets break-inside:avoid actually work on each one. */
-    .pkg-grid{ display:block; }
-    .pkg-card{ margin-bottom:1rem; }
-    .pkg-card:last-child{ margin-bottom:0; }
-    .steps{ display:block; }
-    .step{ margin-bottom:0.9rem; }
-    .step:last-child{ margin-bottom:0; }
-    .pkg-card, .note, .contact-card, .exec, .step, table{
-      break-inside:avoid; page-break-inside:avoid;
-    }
-    tr{ break-inside:avoid; page-break-inside:avoid; }
-    h1, h2, h3, .project-head{ break-after:avoid; page-break-after:avoid; }
-    section.block{ break-inside:auto; }
+    font-size:0.8rem;
+    text-align:center;
   }
 </style>
 
 <div class="cover-top">
   <div class="cover-top-inner">
-    <span class="eyebrow on-accent">Propuesta de servicios</span>
-    <h1>Propuesta de gestión y marketing de redes sociales</h1>
-  </div>
-</div>
-<div class="cover-bottom">
-  <div class="cover-bottom-inner">
-    <div class="halfcircle" aria-hidden="true"></div>
-    <div class="cover-meta">
-      <div><span class="mlabel">Preparado para</span><span class="mval">Rafael Marquez</span></div>
-      <div><span class="mlabel">Preparado por</span><span class="mval">Juliana Avendaño García</span></div>
-      <div><span class="mlabel">Fecha</span><span class="mval">14 de septiembre de 2026</span></div>
-      <div><span class="mlabel">Validez</span><span class="mval">15 días</span></div>
-    </div>
+    <span class="eyebrow on-accent">Propuestas de servicios</span>
+    <h1>Juliana Avendaño García</h1>
+    <p class="dek">Marketing digital y comunicación para proyectos culturales y audiovisuales.</p>
   </div>
 </div>
 
 <div class="wrap">
+  <div class="halfcircle" aria-hidden="true"></div>
 
-  <section class="block intro">
-    <p>Aunque son dos negocios distintos — Virprotec, del lado técnico, e Incruiser, del lado de los viajes — comparten el mismo problema de fondo, ninguno tiene todavía el contenido que necesita para generar confianza antes de la primera conversación con un cliente. Por eso esta propuesta separa cada proyecto en su propio plan, con el punto de partida que le corresponde a cada uno.</p>
-    <p>A continuación, el diagnóstico y la propuesta principal para cada proyecto, seguidos de una alternativa de consultoría de menor inversión y de los servicios de fotografía y vídeo profesional como opción adicional. Cierra con el resumen de inversión conjunto.</p>
-  </section>
+  <div class="note">
+    <strong>Esta página aloja propuestas personalizadas.</strong><br>
+    Si tienes el enlace directo a la tuya, ábrelo desde el mensaje o correo donde lo recibiste. Si llegaste aquí sin un enlace específico, escríbeme y te lo comparto.
+  </div>
 
-  <!-- PROYECTO 1 — VIRPROTEC -->
-  <section class="block">
-    <div class="project">
-      <div class="project-head">
-        <span class="eyebrow">Proyecto 01 · Virprotec</span>
-        <p>Hoy Virprotec no tiene presencia en redes ni una identidad visual definida para usarlas. Antes de publicar el primer contenido, necesita una adecuación de marca a nivel visual para poder conectar mejor con la audiencia a la que quiere llegar.</p>
-      </div>
-
-      <p class="subhead">La propuesta</p>
-      <div class="pkg-grid">
-        <div class="pkg-card">
-          <span class="pkg-name">Mini-branding para redes sociales</span>
-          <span class="pkg-price">250 € + IVA · pago único</span>
-          <div class="pkg-row"><span class="pkg-label">Incluye</span><p>Firma/logotipo simple para redes, paleta de color, tipografía, diseño de foto de perfil y portada, 5 plantillas de contenido reutilizables (Canva).</p></div>
-          <div class="pkg-row no"><span class="pkg-label">No incluye</span><p>Manual de marca completo, papelería corporativa, naming ni registro de marca.</p></div>
-          <div class="pkg-row entrega"><span class="pkg-label">Entrega</span><p>A desarrollar en el primer mes de contratación.</p></div>
-        </div>
-        <div class="pkg-card">
-          <span class="pkg-name">Gestión de redes — Básico</span>
-          <span class="pkg-price">420 € + IVA / mes</span>
-          <span class="pkg-discount">357 € + IVA/mes con compromiso de 6 meses (−15%)</span>
-          <div class="pkg-row"><span class="pkg-label">Incluye</span><p>Creación de perfiles, calendario editorial mensual, 8-10 publicaciones, 10-12 stories, diseño con la nueva identidad, community management básico, informe mensual.</p></div>
-          <div class="pkg-row no"><span class="pkg-label">No incluye</span><p>Vídeo, fotografía, campañas de publicidad (Meta Ads), estrategia inicial (se cotiza aparte, ver abajo).</p></div>
-          <div class="pkg-row entrega"><span class="pkg-label">Entrega</span><p>Perfiles listos en la primera semana; contenido publicado semanalmente desde el mes 2, una vez lista la estrategia inicial.</p></div>
-        </div>
-      </div>
-      <div class="note alt">Virprotec pasa de no tener redes a tener una presencia activa, coherente y profesional, lista para escalar más adelante con vídeo o publicidad si hace falta.</div>
-    </div>
-  </section>
-
-  <!-- PROYECTO 2 — INCRUISER -->
-  <section class="block">
-    <div class="project">
-      <div class="project-head">
-        <span class="eyebrow">Proyecto 02 · Incruiser — viajes en crucero</span>
-        <p>El objetivo no es solo vender planes de crucero, es construir autoridad personal y que las familias lo reconozcan como la referencia de confianza en viajes accesibles. Eso se construye con presencia constante y contenido que llame la atención.</p>
-      </div>
-
-      <p class="subhead">La propuesta</p>
-      <div class="pkg-grid">
-        <div class="pkg-card">
-          <span class="pkg-name">Gestión de redes — Intermedio</span>
-          <span class="pkg-price">590 € + IVA / mes</span>
-          <span class="pkg-discount">500 € + IVA/mes con compromiso de 6 meses (−15%)</span>
-          <div class="pkg-row"><span class="pkg-label">Incluye</span><p>Calendario editorial, 12-15 publicaciones/mes (3 reels incluídos), 15-20 stories, grabación y edición de vídeo con iPhone 16 Pro (hasta 3 reels/mes), 1 campaña de Meta Ads/mes, community management, informe mensual con analítica.</p></div>
-          <div class="pkg-row no"><span class="pkg-label">No incluye</span><p>Vídeo o fotografía con cámara profesional, estrategia inicial (se cotiza aparte, ver abajo).</p></div>
-          <div class="pkg-row entrega"><span class="pkg-label">Entrega</span><p>Contenido semanal desde el mes 2, una vez lista la estrategia inicial; grabación en 1 jornada mensual acordada; informe en los primeros 5 días hábiles del mes siguiente.</p></div>
-        </div>
-      </div>
-      <div class="note alt">Este plan combina publicación constante y vídeo ligero (grabado con iPhone) en un único paquete mensual, la forma más simple de construir autoridad de manera sostenida. Si más adelante busca contenido de mayor producción, puede sumar cámara profesional como servicio adicional (ver más abajo).</div>
-    </div>
-  </section>
-
-  <!-- ESTRATEGIA INICIAL -->
-  <section class="block">
-    <span class="eyebrow" style="display:block;margin-bottom:0.6rem;">Antes de empezar</span>
-    <h2 style="font-size:clamp(1.7rem,4.5vw,2.1rem);">Estrategia inicial, por cuenta</h2>
-    <p style="margin-top:0.7rem;color:var(--ink-soft);max-width:60ch;">A diferencia de una auditoría, esto no es una recomendación general: es el plan operativo que el equipo va a ejecutar. Cada cuenta necesita su propio tono de marca, pilares de contenido y un calendario de publicaciones ya armado para el primer trimestre — el insumo con el que se empieza a producir desde el día uno. Por eso solo se ofrece junto con la contratación de un paquete de gestión de redes, nunca como servicio independiente.</p>
-    <div class="table-wrap" style="margin-top:1.1rem;">
-      <table>
-        <thead><tr><th>Cuenta</th><th>Tipo</th><th>Precio</th></tr></thead>
-        <tbody>
-          <tr><td>Virprotec</td><td>Pago único</td><td class="num">280 €</td></tr>
-          <tr><td>Incruiser</td><td>Pago único</td><td class="num">280 €</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="note"><strong>Importante:</strong> si se contratan paquetes de gestión de redes para las dos cuentas a la vez, solo se cobra una estrategia inicial para ambas cuentas (280 € + IVA en total, no 280 € por cada una). A desarrollar en el primer mes de contratación, junto con el mini-branding, antes de iniciar la gestión de redes.</div>
-  </section>
-
-  <!-- CONSULTORÍA ALTERNATIVA -->
-  <section class="block">
-    <span class="eyebrow" style="display:block;margin-bottom:0.6rem;">Alternativa de menor inversión</span>
-    <h2 style="font-size:clamp(1.7rem,4.5vw,2.1rem);">Consultoría</h2>
-    <p style="margin-top:0.7rem;color:var(--ink-soft);max-width:60ch;">Pensada para quien todavía no va a contratar la gestión de redes, o simplemente quiere una opinión externa antes de decidir: un diagnóstico puntual, con recomendaciones que el cliente puede implementar por su cuenta, sin compromiso mensual.</p>
-    <div class="pkg-grid" style="margin-top:1.1rem;">
-      <div class="pkg-card">
-        <span class="pkg-name">Auditoría de redes sociales</span>
-        <span class="pkg-price">180 € + IVA</span>
-        <div class="pkg-row"><span class="pkg-label">Incluye</span><p>Análisis de perfiles activos (contenido, estética, engagement, frecuencia), benchmark de 2-3 competidores, informe con recomendaciones, sesión de presentación (1h).</p></div>
-        <div class="pkg-row no"><span class="pkg-label">No incluye</span><p>Plan de contenido, calendario editorial ni implementación de las recomendaciones — es un diagnóstico para decidir, no un plan para ejecutar.</p></div>
-        <div class="pkg-row entrega"><span class="pkg-label">Entrega</span><p>5-7 días hábiles.</p></div>
-      </div>
-      <div class="pkg-card">
-        <span class="pkg-name">Auditoría general de estrategia digital</span>
-        <span class="pkg-price">420 € + IVA</span>
-        <div class="pkg-row"><span class="pkg-label">Incluye</span><p>Redes, web/SEO básico, email marketing y funnel, benchmark de competencia, plan de acción a 3-6 meses, sesión de presentación (1,5h).</p></div>
-        <div class="pkg-row no"><span class="pkg-label">No incluye</span><p>Implementación (disponible por hora o vía los paquetes de gestión de redes).</p></div>
-        <div class="pkg-row entrega"><span class="pkg-label">Entrega</span><p>10-12 días hábiles.</p></div>
-      </div>
-    </div>
-    <div class="note alt">Ambas auditorías pueden aplicarse a Virprotec, a Incruiser, o a ambas por separado.</div>
-  </section>
-
-  <!-- SERVICIOS ADICIONALES -->
-  <section class="block">
-    <span class="eyebrow" style="display:block;margin-bottom:0.6rem;">Servicio adicional</span>
-    <h2 style="font-size:clamp(1.7rem,4.5vw,2.1rem);">Fotografía y vídeo profesional</h2>
-    <p style="margin-top:0.7rem;color:var(--ink-soft);max-width:60ch;">Disponibles como complemento para cualquiera de los dos proyectos, si en algún momento necesitan contenido de mayor producción que el que ya incluyen los paquetes anteriores.</p>
-    <div class="pkg-grid" style="margin-top:1.1rem;">
-      <div class="pkg-card">
-        <span class="pkg-name">Sesión Express (3h)</span>
-        <span class="pkg-price">320 € + IVA</span>
-        <div class="pkg-row"><span class="pkg-label">Incluye</span><p>Cámara profesional + iluminación básica, dirección de arte básica, edición de 2 piezas cortas (reels) + selección de 15-20 fotos editadas, cesión de derechos de uso.</p></div>
-        <div class="pkg-row entrega"><span class="pkg-label">Entrega</span><p>5 días hábiles.</p></div>
-      </div>
-      <div class="pkg-card">
-        <span class="pkg-name">Sesión Completa (5h)</span>
-        <span class="pkg-price">600 € + IVA</span>
-        <div class="pkg-row"><span class="pkg-label">Incluye</span><p>Cámara profesional, dirección de arte ampliada, edición de 4 piezas cortas (reels) + 30-40 fotos editadas, cesión de derechos de uso.</p></div>
-        <div class="pkg-row entrega"><span class="pkg-label">Entrega</span><p>7 días hábiles.</p></div>
-      </div>
-    </div>
-    <div class="note alt">Hora adicional en cualquier sesión: 90 € + IVA. Desplazamiento fuera del área metropolitana: a consultar. El valor del estudio de grabación y de la utilería no está incluido en el precio, se presupuesta según lo que requiera la sesión.</div>
-  </section>
-
-  <!-- INVERSIÓN -->
-  <section class="block">
-    <span class="eyebrow" style="display:block;margin-bottom:0.6rem;">Resumen</span>
-    <h2 style="font-size:clamp(1.9rem,5vw,2.4rem);">Inversión</h2>
-
-    <div class="exec" style="margin-top:1.2rem;">
-      <span class="exec-label">Cómo se factura</span>
-      <div class="exec-num mono">530 € el mes 1 · luego 857 € + IVA / mes</div>
-      <p>El mes 1 solo se factura el arranque: mini-branding (250 €) y una única estrategia inicial (280 € para las dos cuentas, no 280 € por cada una), mientras se preparan los insumos con los que se va a gestionar cada cuenta. La gestión de redes (Virprotec Básico + Incruiser Intermedio, con permanencia de 6 meses) empieza a facturarse desde el mes 2, ya con todo listo para publicar.</p>
-    </div>
-
-    <div class="inv-group">
-      <h3>Virprotec</h3>
-      <span class="inv-tag">Precio con descuento: redes = permanencia de 6 meses · estrategia = si se contratan ambas cuentas</span>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>Concepto</th><th>Tipo</th><th>Precio</th><th>Precio con descuento</th></tr></thead>
-          <tbody>
-            <tr><td>Mini-branding para redes</td><td>Pago único</td><td class="num">250 €</td><td class="num">—</td></tr>
-            <tr><td>Gestión de redes — Básico</td><td>Mensual</td><td class="num">420 €</td><td class="num" style="color:var(--good)">357 €</td></tr>
-            <tr><td>Estrategia inicial</td><td>Pago único</td><td class="num">280 €</td><td class="num" style="color:var(--good)">280 €</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="inv-group">
-      <h3>Incruiser</h3>
-      <span class="inv-tag">Precio con descuento: redes = permanencia de 6 meses · estrategia = si se contratan ambas cuentas</span>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>Concepto</th><th>Tipo</th><th>Precio</th><th>Precio con descuento</th></tr></thead>
-          <tbody>
-            <tr><td>Gestión de redes — Intermedio</td><td>Mensual</td><td class="num">590 €</td><td class="num" style="color:var(--good)">500 €</td></tr>
-            <tr><td>Estrategia inicial</td><td>Pago único</td><td class="num">280 €</td><td class="num" style="color:var(--good)">0 €</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="note">La estrategia inicial de Incruiser queda en 0 € porque, al contratar ambas cuentas, ya se cobró una única vez dentro de Virprotec.</div>
-    </div>
-
-    <div class="inv-group">
-      <h3>Total global de la propuesta</h3>
-      <span class="inv-tag">Planes principales de Virprotec e Incruiser — no incluye consultoría ni servicios adicionales</span>
-      <div class="table-wrap">
-        <table>
-          <tbody>
-            <tr style="font-weight:600;background:var(--surface-2);"><td>Mes 1 — solo arranque (mini-branding + estrategia inicial)</td><td class="num">530 €</td></tr>
-            <tr style="font-weight:600;background:var(--surface-2);"><td>Desde el mes 2 — gestión de redes, todos los meses</td><td class="num">857 €/mes</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="note alt" style="margin-top:1.4rem;">Todos los precios son + IVA. La permanencia de 6 meses aplica únicamente a los servicios mensuales de gestión de redes; si el proyecto se cancela antes, el descuento se recalcula a precio estándar. <em>(Sugerencia editable: un 5% adicional de descuento si se contratan ambos proyectos —Virprotec e Incruiser— de forma simultánea.)</em></div>
-  </section>
-
-  <!-- SIGUIENTES PASOS -->
-  <section class="block">
-    <span class="eyebrow" style="display:block;margin-bottom:0.6rem;">Cómo seguimos</span>
-    <h2 style="font-size:clamp(1.9rem,5vw,2.4rem);">Siguientes pasos</h2>
-    <div class="steps">
-      <div class="step"><span class="step-num mono">1</span><p><strong>Confirmar el plan</strong>Responder esta propuesta indicando los paquetes elegidos para Virprotec e Incruiser (o la alternativa de consultoría, si se prefiere empezar por ahí). Para comenzar, se solicita el 50% del primer mes como anticipo a la firma del contrato.</p></div>
-      <div class="step"><span class="step-num mono">2</span><p><strong>Formulario de inicio</strong>Entrega de formulario para alinear tono de marca, referencias visuales y fechas de grabación (si el paquete contratado lo incluye).</p></div>
-      <div class="step"><span class="step-num mono">3</span><p><strong>Puesta en marcha</strong>Entrega del mini-branding de Virprotec y primer calendario de contenido dentro de las 2 semanas siguientes a la confirmación.</p></div>
-    </div>
-
-    <div class="contact-card">
-      <div>
-        <span class="who">Juliana Avendaño García</span>
-        <div class="email mono">juliana.avendanogarcia@gmail.com</div>
-      </div>
-    </div>
-  </section>
-
+  <div class="contact-card">
+    <span class="who">Juliana Avendaño García</span>
+    <div class="email mono">juliana.avendanogarcia@gmail.com</div>
+  </div>
 </div>
 
 <footer>
-  Propuesta válida por 15 días desde la fecha indicada. Precios sujetos al IVA vigente en España. Los plazos de entrega comienzan a contar desde la confirmación por escrito y, cuando aplique, el pago inicial acordado.
+  © 2026 Juliana Avendaño García. Todas las propuestas alojadas aquí son documentos privados preparados para un destinatario específico.
 </footer>
 
 </body></html>
