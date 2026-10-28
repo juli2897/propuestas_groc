@@ -137,6 +137,66 @@ footer a { color: var(--tinta); text-decoration: underline; font-weight: 600; }
     text-align: center;
   }
 }
+/* Sección ¿Con Quién Trabajamos? (Estilo Carrusel Naringo) */
+.clientes-carrusel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+.cliente-item {
+  flex: 1;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.logo-cliente {
+  max-width: 130px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+.logo-cliente:hover {
+  opacity: 1;
+}
+.cliente-item span {
+  font-size: 13px;
+  color: var(--tinta-suave);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Decoración de título (Estilo Naringo) */
+.separador-titulo {
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--amarillo);
+  margin: 15px auto 0;
+}
+
+/* Ajuste responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .clientes-carrusel {
+    justify-content: center;
+    gap: 40px;
+  }
+  .cliente-item {
+    flex: 0 0 40%; /* Mostrar de dos en dos en móviles */
+  }
+}
+@media (max-width: 480px) {
+  .cliente-item {
+    flex: 0 0 100%; /* Una sola columna en móviles muy pequeños */
+  }
+}
 </style>
 </head>
 <body>
@@ -160,6 +220,7 @@ footer a { color: var(--tinta); text-decoration: underline; font-weight: 600; }
   <ul class="nav-menu">
     <li><a href="#inicio">Inicio</a></li>
     <li><a href="#sobre-mi">Sobre mí</a></li>
+    <li><a href="#clientes">Clientes</a></li>
     <li><a href="#servicios">Servicios</a></li>
     <li><a href="#contacto">Contacto</a></li>
     <li><a href="https://grocestudio.com/aviso-legal/" class="nav-legal">Aviso Legal</a></li>
@@ -193,6 +254,44 @@ footer a { color: var(--tinta); text-decoration: underline; font-weight: 600; }
           <li>✉️ <a href="mailto:juliana@grocestudio.com">juliana@grocestudio.com</a></li>
         </ul>
       </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN ¿CON QUIÉN TRABAJAMOS? -->
+  <section id="clientes" class="seccion" style="text-align: center;">
+    <h2>¿Con quién trabajamos? <span class="separador-titulo"></span></h2>
+    <div class="clientes-carrusel">
+      
+      <!-- Cliente 1 -->
+      <div class="cliente-item">
+        <img src="PSV.png" alt="Photographic Social Vision" class="logo-cliente">
+        <span>Photographic Social Vision</span>
+      </div>
+
+      <!-- Cliente 2 -->
+      <div class="cliente-item">
+        <img src="ARTEFACTO_LOGO.png" alt="Artefacto Fílmico" class="logo-cliente">
+        <span>Artefacto Fílmico</span>
+      </div>
+
+      <!-- Cliente 3 -->
+      <div class="cliente-item">
+        <img src="FORMA.png" alt="FORMA" class="logo-cliente">
+        <span>FORMA</span>
+      </div>
+
+      <!-- Cliente 4 -->
+      <div class="cliente-item">
+        <img src="FIPCA.png" alt="FIPCA" class="logo-cliente">
+        <span>FIPCA</span>
+      </div>
+
+      <!-- Cliente 5 -->
+      <div class="cliente-item">
+        <img src="Borondo.png" alt="Borondo Films" class="logo-cliente">
+        <span>Borondo Films</span>
+      </div>
+
     </div>
   </section>
 
