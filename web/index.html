@@ -79,6 +79,64 @@ footer a { color: var(--tinta); text-decoration: underline; font-weight: 600; }
   .top-bar { justify-content: center; }
   .sol-grande { right:-22vw; width:62vw; }
 }
+  /* Nuevo diseño para Sobre Mí */
+.sobre-mi-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  margin-top: 40px;
+}
+.sobre-mi-texto {
+  flex: 1;
+}
+.sobre-mi-perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0;
+  width: clamp(200px, 25vw, 280px);
+}
+.foto-circular {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--tinta);
+  background-color: var(--crema);
+  margin-bottom: 20px;
+}
+.datos-perfil {
+  font-size: 16px;
+  color: var(--tinta);
+  font-weight: 600;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.datos-perfil li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.datos-perfil a {
+  color: var(--tinta);
+  text-decoration: none;
+}
+.datos-perfil a:hover {
+  text-decoration: underline;
+}
+
+/* Ajuste responsive para móviles */
+@media (max-width: 768px) {
+  .sobre-mi-wrapper {
+    flex-direction: column-reverse;
+    gap: 30px;
+    text-align: center;
+  }
+}
 </style>
 </head>
 <body>
@@ -116,10 +174,26 @@ footer a { color: var(--tinta); text-decoration: underline; font-weight: 600; }
     <a class="boton" href="#contacto">Solicitar presupuesto</a>
   </section>
 
-<!-- 4. SOBRE NOSOTROS -->
-  <section id="sobre-mi" class="seccion" style="text-align: center;">
+<!-- 4. SOBRE MÍ -->
+  <section id="sobre-mi" class="seccion">
     <h2>Sobre mí</h2>
-    <p class="intro" style="margin-left: auto; margin-right: auto;">Soy Juliana Avendaño García, comunicadora especializada en marketing digital y desarrollo web. Con experiencia demostrable gestionando la presencia digital de productoras audiovisuales y fundaciones culturales en España. Mi misión es traducir la esencia de tu negocio en una identidad digital atractiva, generando confianza y conectando directamente con tu público objetivo.</p>
+    <div class="sobre-mi-wrapper">
+      <!-- Columna Texto -->
+      <div class="sobre-mi-texto">
+        <p class="intro">
+          Soy <strong>Juliana Avendaño García</strong>, comunicadora especializada en marketing digital y desarrollo web. Con experiencia demostrable gestionando la presencia digital de productoras audiovisuales y fundaciones culturales en España. Mi misión es traducir la esencia de tu negocio en una identidad digital atractiva, generando confianza y conectando directamente con tu público objetivo.
+        </p>
+      </div>
+      
+      <!-- Columna Foto y Datos (Estilo Naringo) -->
+      <div class="sobre-mi-perfil">
+        <img src="Juliana.jpeg" alt="Juliana Avendaño García" class="foto-circular">
+        <ul class="datos-perfil">
+          <li>📞 <a href="tel:+34603286511">(+34) 603 286 511</a></li>
+          <li>✉️ <a href="mailto:juliana@grocestudio.com">juliana@grocestudio.com</a></li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <!-- 5. SERVICIOS -->
